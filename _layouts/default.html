@@ -12,9 +12,9 @@
       <header class="site-header">
         <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
         <nav aria-label="Main navigation">
-          <a href="{{ '/writeups/' | relative_url }}">Writeups</a>
-          <a href="{{ '/tools/' | relative_url }}">Tools</a>
-          <a href="{{ '/about/' | relative_url }}">About</a>
+          <a{% if page.url == '/writeups/' or page.layout == 'post' %} class="is-active"{% endif %} href="{{ '/writeups/' | relative_url }}">Writeups</a>
+          <a{% if page.url == '/tools/' or page.layout == 'tool' %} class="is-active"{% endif %} href="{{ '/tools/' | relative_url }}">Tools</a>
+          <a{% if page.url == '/about/' %} class="is-active"{% endif %} href="{{ '/about/' | relative_url }}">About</a>
         </nav>
       </header>
       <main>
