@@ -24,17 +24,4 @@ layout: default
     </section>
   {% endif %}
 
-  <section class="used-in">
-    <h2>Used in</h2>
-    <ul class="content-list">
-      {% assign found_posts = false %}
-      {% for post in site.posts %}
-        {% if post.tools contains page.title %}
-          {% assign found_posts = true %}
-          <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      {% unless found_posts %}<li class="empty">No writeups yet.</li>{% endunless %}
-    </ul>
-  </section>
 </article>

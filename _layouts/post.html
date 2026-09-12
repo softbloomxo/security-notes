@@ -6,9 +6,6 @@ layout: default
     <h1>{{ page.title }}</h1>
     <div class="article-meta">
       <span><span class="meta-label">Date</span> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time></span>
-      {% if page.tags and page.tags.size > 0 %}
-        <span class="tag-list"><span class="meta-label">Tags</span> {% for tag in page.tags %}<span>#{{ tag }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}</span>
-      {% endif %}
       {% if page.tools and page.tools.size > 0 %}
         <span class="tool-links"><span class="meta-label">Tools</span> {% for tool_name in page.tools %}{% assign tool = site.tools | where: 'title', tool_name | first %}{% if tool %}<a href="{{ tool.url | relative_url }}">{{ tool_name }}</a>{% else %}{{ tool_name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
       {% endif %}
