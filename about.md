@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-セキュリティ、CTF、プログラミングについての記録。
+セキュリティ、Vulnhub、プログラミングについての記録。
 
 Pythonを使った開発やVulnHubなどを通して、気になったことや学んだことを残しています。
 
