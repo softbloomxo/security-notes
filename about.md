@@ -4,6 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Security, CTF, and programming notes.
+セキュリティ、CTF、プログラミングについての記録。
 
-This site is built with Jekyll and maintained in Markdown.
+Pythonを使った開発やVulnHubなどを通して、気になったことや学んだことを残しています。
+
+このサイトはJekyll + Markdownで構築しています。
+
+猫が好きです。
