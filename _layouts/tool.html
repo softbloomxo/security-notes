@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<article class="tool-content">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.category %}<p class="meta">Category: {{ page.category }}</p>{% endif %}
+  </header>
+  {{ content }}
+
+  {% if page.screenshots and page.screenshots.size > 0 %}
+    <section class="screenshots">
+      <h2>Screenshots</h2>
+      <div class="screenshot-grid">
+        {% for screenshot in page.screenshots %}
+          <figure>
+            <a href="{{ page.image_dir | append: '/' | append: screenshot.file | relative_url }}">
+              <img src="{{ page.image_dir | append: '/' | append: screenshot.file | relative_url }}" alt="{{ screenshot.alt | default: screenshot.file | escape }}" loading="lazy">
+            </a>
+            {% if screenshot.caption %}<figcaption>{{ screenshot.caption }}</figcaption>{% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="used-in">
+    <h2>Used in</h2>
+    <ul class="content-list">
+      {% assign found_posts = false %}
+      {% for post in site.posts %}
+        {% if post.tools contains page.title %}
+          {% assign found_posts = true %}
+          <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% unless found_posts %}<li class="empty">No writeups yet.</li>{% endunless %}
+    </ul>
+  </section>
+</article>

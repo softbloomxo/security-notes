@@ -1,0 +1,29 @@
+title: security notes
+description: Security / CTF / Programming
+url: ""
+baseurl: ""
+
+collections:
+  tools:
+    output: true
+    permalink: /tools/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: tools
+    values:
+      layout: tool
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
