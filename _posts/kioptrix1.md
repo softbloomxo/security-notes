@@ -3,11 +3,11 @@ layout: post
 title: "Kioptrix: Level 1 (#1)"
 date: 2026-09-12
 tags:
-  - 
-  - 
+  - vulnhub
+  - writeups
 tools:
   - nmap
-  - 
+  - gobuster
 image_dir: /assets/images/writeups/kioptrix1/screenshots
 # 画像を置いたらファイル名を追加すると、ページ末尾にギャラリーが表示されます。
 # screenshots:
