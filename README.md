@@ -82,7 +82,7 @@ screenshots:
 画像を本文中の好きな場所に表示することもできます。GitHub Pages のプロジェクトサイトでも正しいURLになるよう、次の形式を使います。
 
 ```md
-![HTTP request]({{ '/assets/images/writeups/example-ctf/screenshots/request.png' | relative_url }})
+![HTTP request]({{ '/assets/images/writeups/example-ctf/request.png' | relative_url }})
 ```
 
 Tool でも同じ仕組みを使えます。`image_dir` のパスを `assets/images/tools/<tool-name>/screenshots` に変更してください。
