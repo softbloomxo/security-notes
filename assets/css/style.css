@@ -55,6 +55,8 @@ pre code { padding: 0; background: transparent; }
 blockquote { margin-left: 0; padding-left: 1rem; border-left: 3px solid var(--line); color: var(--muted); }
 hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 img { max-width: 100%; height: auto; }
+.post-content p > a:has(img) { display: inline-block; cursor: zoom-in; }
+.post-content p > a:has(img):hover { outline: 1px solid var(--accent); }
 
 .home-hero { padding: 0.4rem 0 1.5rem; }
 .home-hero h1 { margin-bottom: 0.5rem; }

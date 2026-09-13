@@ -19,7 +19,7 @@ layout: default
       <div class="screenshot-grid">
         {% for screenshot in page.screenshots %}
           <figure>
-            <a href="{{ page.image_dir | append: '/' | append: screenshot.file | relative_url }}">
+            <a class="image-link" href="{{ page.image_dir | append: '/' | append: screenshot.file | relative_url }}" target="_blank" rel="noopener">
               <img src="{{ page.image_dir | append: '/' | append: screenshot.file | relative_url }}" alt="{{ screenshot.alt | default: screenshot.file | escape }}" loading="lazy">
             </a>
             {% if screenshot.caption %}<figcaption>{{ screenshot.caption }}</figcaption>{% endif %}
