@@ -68,40 +68,34 @@ command <target>
 
 ## Writeup・Tool に画像を追加する
 
-画像は、記事ごと・ツールごとの `screenshots` フォルダに置きます。画像ファイルも GitHub に push すれば、そのまま公開されます。
+画像は記事ごとのフォルダに置きます。画像ファイルも GitHub に push すれば、そのまま公開されます。
 
 ```text
 assets/images/
   writeups/
     example-ctf/
-      screenshots/
-        request.png
-        result.png
+      request.png
+      result.png
   tools/
     burp-suite/
-      screenshots/
-        repeater.png
+      repeater.png
 ```
 
-Markdown の front matter にフォルダと画像一覧を指定すると、ページ下部にスクリーンショット一覧が自動表示されます。
+Markdown の front matter に画像フォルダを一度だけ指定します。
 
 ```md
-image_dir: /assets/images/writeups/example-ctf/screenshots
-screenshots:
-  - file: request.png
-    alt: "HTTP request"
-    caption: "Target request"
-  - file: result.png
-    alt: "Response showing the result"
+image_dir: /assets/images/writeups/example-ctf
 ```
 
-画像を本文中の好きな場所に表示することもできます。GitHub Pages のプロジェクトサイトでも正しいURLになるよう、次の形式を使います。画像をクリックすると元サイズの画像を開けます。
+本文中の好きな場所に、ファイル名だけで画像を表示できます。`alt` は必要なときだけ追加してください。画像をクリックすると元サイズを開けます。
 
 ```md
-[![HTTP request]({{ '/assets/images/writeups/example-ctf/request.png' | relative_url }})]({{ '/assets/images/writeups/example-ctf/request.png' | relative_url }})
+{% include image.html file="request.png" %}
+
+{% include image.html file="result.png" alt="Response showing the result" %}
 ```
 
-Tool でも同じ仕組みを使えます。`image_dir` のパスを `assets/images/tools/<tool-name>/screenshots` に変更してください。
+Tool でも同じ仕組みを使えます。`image_dir` のパスを `assets/images/tools/<tool-name>` に変更してください。ページ末尾には画像一覧を表示しません。
 
 ## GitHub Pages で公開する
 

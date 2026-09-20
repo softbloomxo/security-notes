@@ -7,21 +7,4 @@ layout: default
     {% if page.category %}<p class="meta">Category: {{ page.category }}</p>{% endif %}
   </header>
   {{ content }}
-
-  {% if page.screenshots and page.screenshots.size > 0 %}
-    <section class="screenshots">
-      <h2>Screenshots</h2>
-      <div class="screenshot-grid">
-        {% for screenshot in page.screenshots %}
-          <figure>
-            <a class="image-link" href="{{ page.image_dir | append: '/' | append: screenshot.file | relative_url }}" target="_blank" rel="noopener">
-              <img src="{{ page.image_dir | append: '/' | append: screenshot.file | relative_url }}" alt="{{ screenshot.alt | default: screenshot.file | escape }}" loading="lazy">
-            </a>
-            {% if screenshot.caption %}<figcaption>{{ screenshot.caption }}</figcaption>{% endif %}
-          </figure>
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
-
 </article>

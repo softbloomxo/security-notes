@@ -74,12 +74,8 @@ img { max-width: 100%; height: auto; }
 .content-list li { padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
 .content-list time { color: var(--muted); font-family: var(--mono); margin-right: 0.7rem; white-space: nowrap; }
 .empty { color: var(--muted); }
-.screenshots { margin-top: 3rem; }
-.screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-.screenshot-grid figure { margin: 0; }
-.screenshot-grid a { display: block; border: 1px solid var(--line); background: var(--surface); }
-.screenshot-grid img { display: block; width: 100%; }
-.screenshot-grid figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; }
+.content-image { display: inline-block; cursor: zoom-in; }
+.content-image:hover { outline: 1px solid var(--accent); }
 .site-footer { padding: 1.5rem 0; border-top: 1px solid var(--line); color: var(--muted); font-family: var(--mono); font-size: 0.85rem; }
 
 @media (max-width: 540px) {
